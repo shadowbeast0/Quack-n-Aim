@@ -1,14 +1,4 @@
 #!/usr/bin/env python
-
-"""
-Carnival Duck Shoot — Index-Move, Multi-Finger Shoot, 1-Min Timer (Infinite Ammo)
-
-- FIX: _auto_open_camera() no longer overwrites cap.set (was causing AttributeError).
-- Infinite ammo. Hard 60-second round timer; game ends at 0, showing stages cleared + score.
-- Pointer moves ONLY when index finger is raised. Shooting on 2+ fingers (rising edge + cooldown).
-- Early stages are easier; background is pure black.
-"""
-
 import sys
 import math
 import time
@@ -558,7 +548,7 @@ def main():
 
     
     try:
-        duck_png = pygame.image.load("murari.jpeg").convert_alpha()
+        duck_png = pygame.image.load("duck.png").convert_alpha()
     except Exception as e:
         duck_png = None
         print("Warning: duck.png not found. Using placeholder ducks.", e)
@@ -842,3 +832,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
